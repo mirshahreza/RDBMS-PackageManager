@@ -1,0 +1,9 @@
+CREATE OR ALTER   FUNCTION [dbo].[zz_fn_Add] 
+(
+	@A INT,@B INT
+)
+RETURNS INT
+AS
+BEGIN
+	RETURN @A+@B;
+END
