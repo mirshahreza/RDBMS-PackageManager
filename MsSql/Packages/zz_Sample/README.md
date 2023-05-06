@@ -1,14 +1,13 @@
 # zz_Sample
+A sample to show
+1- How to implement packages - naming and folder structure
+2- How to deploy Package or individual scripts
 
-This deployments are valid
+ 
+### Deploy all scripts
+>EXEC dbo.zz_sp_Deploy 'zz_Sample'
+--OR 
+>EXEC dbo.zz_sp_Deploy 'zz_Sample/All.sql'
 
-// Deploy all scripts
-EXEC dbo.zz_sp_Deploy 'zz_Sample'
-OR 
-EXEC dbo.zz_sp_Deploy 'zz_Sample/All.sql'
-
-// Deploy just zz_sp_Individual.sql
-EXEC dbo.zz_sp_Deploy 'zz_Sample/zz_sp_Individual.sql'
-
-
-
+### Deploy individual scripts
+>EXEC dbo.zz_sp_Deploy 'zz_Sample/zz_sp_Individual.sql'
