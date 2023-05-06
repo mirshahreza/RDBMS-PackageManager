@@ -7,7 +7,7 @@ GO
 RECONFIGURE;  
 GO  
 
-CREATE OR ALTER   PROCEDURE [dbo].[zz_sp_Deploy] @PackageName VARCHAR(512)
+CREATE OR ALTER   PROCEDURE [dbo].[zzz_sp_Deploy] @PackageName VARCHAR(512)
 AS
 BEGIN
 
