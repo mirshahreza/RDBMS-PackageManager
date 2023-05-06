@@ -7,14 +7,15 @@ GO
 RECONFIGURE;  
 GO  
 
-CREATE OR ALTER PROCEDURE [dbo].[zz_sp_Deploy] @PackageName VARCHAR(512)
+CREATE OR ALTER   PROCEDURE [dbo].[zz_sp_Deploy] @PackageName VARCHAR(512)
 AS
 BEGIN
 
+	DECLARE	@rr INT,@rv NVARCHAR(4000);
 	DECLARE @BaseURL NVARCHAR(4000) = N'https://raw.githubusercontent.com/mirshahreza/RDBMS-PackageManager/master/MsSql/Packages/';
 	DECLARE @PackageFullURL NVARCHAR(4000) = @BaseURL + @PackageName;
-	DECLARE	@rr INT;
-	DECLARE @rv NVARCHAR(4000);
+
+	IF(@PackageFullURL NOT LIKE N'%.sql') SET @PackageFullURL = @PackageFullURL + '/All.sql'
 
 	DECLARE @status INT;
 	DECLARE @responseText AS TABLE(responseText NVARCHAR(MAX));
