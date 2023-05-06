@@ -1,7 +1,7 @@
 # zz_Sample
 A sample to show
-1- How to implement packages - naming and folder structure
-2- How to deploy Package or individual scripts
+- How to implement packages - naming and folder structure
+- How to deploy Package or individual scripts
 
  
 ### Deploy all scripts
