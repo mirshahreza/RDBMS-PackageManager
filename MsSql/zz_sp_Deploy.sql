@@ -1,3 +1,12 @@
+sp_configure 'show advanced options', 1;  
+GO  
+RECONFIGURE;  
+GO  
+sp_configure 'Ole Automation Procedures', 1;  
+GO  
+RECONFIGURE;  
+GO  
+
 CREATE OR ALTER PROCEDURE [dbo].[zz_sp_Deploy] @PackageName VARCHAR(512)
 AS
 BEGIN
