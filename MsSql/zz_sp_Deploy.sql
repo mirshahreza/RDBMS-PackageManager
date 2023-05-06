@@ -11,7 +11,7 @@ CREATE OR ALTER PROCEDURE [dbo].[zz_sp_Deploy] @PackageName VARCHAR(512)
 AS
 BEGIN
 
-	DECLARE @BaseURL NVARCHAR(4000) = N'https://github.com/mirshahreza/RDBMS-PackageManager/MsSql/Packages/raw/';
+	DECLARE @BaseURL NVARCHAR(4000) = N'https://raw.githubusercontent.com/mirshahreza/RDBMS-PackageManager/master/MsSql/Packages/';
 	DECLARE @PackageFullURL NVARCHAR(4000) = @BaseURL + @PackageName;
 	DECLARE	@rr INT;
 	DECLARE @rv NVARCHAR(4000);
@@ -30,18 +30,15 @@ BEGIN
 	IF(@rr=200)
 	BEGIN
 		PRINT @PackageName + ' fetched successful.'
-		DECLARE @sql NVARCHAR(4000);
 		SET @rv = LTRIM(RTRIM(@rv));
 		IF(CHARINDEX('/*', @rv)=1)
 		BEGIN
-			SET @sql = LTRIM(RTRIM(SUBSTRING(@rv, 3, CHARINDEX('*/', @rv)-3)));
-		END
-		ELSE
-		BEGIN
-			SET @sql = @rv;
+			DECLARE @deps NVARCHAR(4000);
+			SET @deps = LTRIM(RTRIM(SUBSTRING(@rv, 3, CHARINDEX('*/', @rv)-3)));
+			EXECUTE SP_EXECUTESQL @deps;
 		END
 
-		EXECUTE SP_EXECUTESQL @sql;
+		EXECUTE SP_EXECUTESQL @rv;
 		PRINT @PackageName + ' executed successful.';
 		PRINT '---------------------------------------------------';
 		PRINT @rv;
