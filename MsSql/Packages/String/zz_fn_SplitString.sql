@@ -1,7 +1,3 @@
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 -- =============================================
 -- Author:		Mohsen Mirshahreza
 -- Create date: 2023-05-13
@@ -17,5 +13,5 @@ RETURN
 (
 	SELECT value FROM STRING_SPLIT(ISNULL(@String,''), ISNULL(@Splitter,','))
 )
-GO
+
 
