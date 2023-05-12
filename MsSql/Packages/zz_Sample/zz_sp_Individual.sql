@@ -1,5 +1,0 @@
-CREATE OR ALTER PROCEDURE [dbo].[zz_sp_Individual] @A INT,@B INT
-AS
-BEGIN
-	SELECT @A+@B
-END
