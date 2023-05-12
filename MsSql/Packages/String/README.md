@@ -1,13 +1,9 @@
-# Sample
-A sample to show
-- How to implement packages - naming and folder structure
-- How to deploy Package or individual scripts
+# String
+- zz_fn_SplitString
+- zz_fn_NthItem
 
  
 ### Deploy all scripts
->EXEC dbo.zzz_sp_Deploy 'Sample'
+>EXEC dbo.zzz_sp_Deploy 'String'
 --OR 
->EXEC dbo.zzz_sp_Deploy 'Sample/All.sql'
-
-### Deploy individual scripts
->EXEC dbo.zzz_sp_Deploy 'Sample/zz_sp_Individual.sql'
+>EXEC dbo.zzz_sp_Deploy 'String/All.sql'
