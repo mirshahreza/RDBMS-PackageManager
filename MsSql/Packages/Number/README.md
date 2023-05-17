@@ -3,6 +3,8 @@
 
  
 ### Deploy all scripts
->EXEC dbo.zzz_sp_Deploy 'Number'
---OR 
->EXEC dbo.zzz_sp_Deploy 'Number/All.sql'
+>EXEC dbo.zzz_sp_Deploy 'Number' <br />
+
+OR <br />
+
+>EXEC dbo.zzz_sp_Deploy 'Number/All.sql' <br />

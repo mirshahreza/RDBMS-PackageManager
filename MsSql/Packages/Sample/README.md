@@ -5,9 +5,11 @@ A sample to show
 
  
 ### Deploy all scripts
->EXEC dbo.zzz_sp_Deploy 'Sample'
+>EXEC dbo.zzz_sp_Deploy 'Sample' <br />
+
 --OR 
->EXEC dbo.zzz_sp_Deploy 'Sample/All.sql'
+
+>EXEC dbo.zzz_sp_Deploy 'Sample/All.sql' <br />
 
 ### Deploy individual scripts
->EXEC dbo.zzz_sp_Deploy 'Sample/zz_sp_Individual.sql'
+>EXEC dbo.zzz_sp_Deploy 'Sample/zz_sp_Individual.sql' <br />
