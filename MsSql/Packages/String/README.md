@@ -1,8 +1,5 @@
 # String
-- zz_fn_SplitString
-- zz_fn_NthItem
 
- 
 ### Deploy all scripts
 > EXEC dbo.zzz_sp_Deploy 'String' <br />
 
