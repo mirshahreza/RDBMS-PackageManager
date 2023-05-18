@@ -1,8 +1,13 @@
-sp_configure 'show advanced options', 1;  
+-- =============================================
+-- Author:		Mohsen Mirshahreza
+-- Create date: 2023-05-11
+-- Description:	To fetch and deploy scripts from a repository
+-- =============================================
+SP_CONFIGURE 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
 GO  
-sp_configure 'Ole Automation Procedures', 1;  
+SP_CONFIGURE 'Ole Automation Procedures', 1;  
 GO  
 RECONFIGURE;  
 GO  
@@ -41,9 +46,6 @@ BEGIN
 
 		EXECUTE SP_EXECUTESQL @rv;
 		PRINT @PackageName + ' executed successful.';
-		PRINT '---------------------------------------------------';
-		PRINT @rv;
-		PRINT '---------------------------------------------------';
 	END
 	ELSE
 	BEGIN
