@@ -9,4 +9,3 @@ AS
 SELECT [ObjectType],COUNT(*) ObjectsCount
   FROM [zz_vw_UserObjects]
   GROUP BY [ObjectType]
-  ORDER BY COUNT(*) DESC
