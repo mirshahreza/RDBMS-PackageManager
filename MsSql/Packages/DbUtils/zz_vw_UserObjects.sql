@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Mohsen Mirshahreza
 -- Create date: 2023-05-25
--- Description:	Select all object (Table,View,Procedure,ScalarFunction,TableValuedFunction) created by user
+-- Description:	Select all objects (Table,View,Procedure,ScalarFunction,TableValuedFunction) created by user in details
 -- =============================================
 CREATE OR ALTER VIEW [dbo].[zz_vw_UserObjects]
 AS
