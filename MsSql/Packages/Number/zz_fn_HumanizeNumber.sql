@@ -12,6 +12,7 @@ WITH SCHEMABINDING
 AS 
 BEGIN 
 
-	RETURN FORMAT(@InputNumber, 'N');
+	--RETURN FORMAT(@InputNumber, 'N');
+	RETURN 'Ali';
 
 END 
