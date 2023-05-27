@@ -14,6 +14,7 @@ SELECT ObjectId,ObjectName,
 	(SELECT COUNT(1) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ObjectName) FieldsCount, 
 	(SELECT TOP 1 ROWS FROM SYS.SYSINDEXES I WHERE INDID IN (0,1) AND I.Id = ObjectId) RecordsCount,
 	ObjectSizes.TotalSpaceInBytes TotalSpaceInBytes,
+	(SELECT COUNT(*) FROM zz_vw_UserTablesIndexes Inds WHERE Inds.ObjectId=zz_vw_UserObjectsDetails.ObjectId) IndexesCount,
 	CreatedOn, UpdatedOn
 FROM zz_vw_UserObjectsDetails
 LEFT OUTER JOIN 
@@ -26,7 +27,6 @@ LEFT OUTER JOIN
 	AND T.IS_MS_SHIPPED = 0
 	GROUP BY T.NAME
 	) ObjectSizes ON ObjectSizes.TableName=ObjectName
-
 WHERE ObjectType='Table'
 
 
