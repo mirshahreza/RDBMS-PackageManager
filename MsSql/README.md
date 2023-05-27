@@ -15,7 +15,10 @@ OR <br />
 ### To deploy individual packages
 > EXEC zzz_sp_Deploy 'Sample/zz_sp_Individual.sql' <br />
 
+OR <br />
 
+### To deploy all packages
+> EXEC zzz_sp_Deploy '' <br />
 
 
 
