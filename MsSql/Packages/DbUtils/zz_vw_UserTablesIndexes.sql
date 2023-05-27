@@ -1,29 +1,19 @@
 -- =============================================
 -- Author:		Mohsen Mirshahreza
 -- Create date: 2023-05-27
--- Description:	Select all tables with some quick statistics created by user in details
+-- Description:	Select all tables with all indexes
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[zz_vw_UserTablesOverview]
+CREATE OR ALTER VIEW [dbo].[zz_vw_UserTablesIndexes]
 AS
 
-SELECT ObjectId,ObjectName, 
-	(SELECT COUNT(1) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ObjectName) FieldsCount, 
-	(SELECT TOP 1 ROWS FROM SYS.SYSINDEXES I WHERE INDID IN (0,1) AND I.Id = ObjectId) RecordsCount,
-	ObjectSizes.TotalSpaceInBytes TotalSpaceInBytes,
-	CreatedOn, UpdatedOn
+SELECT zz_vw_UserObjectsDetails.ObjectId ObjectId, zz_vw_UserObjectsDetails.ObjectName TableName, IndexesT.IndexName,IndexType,IsUnique
 FROM zz_vw_UserObjectsDetails
-LEFT OUTER JOIN 
-	(
-	SELECT T.NAME AS TableName,(SUM(A.TOTAL_PAGES) * 8) AS TotalSpaceInBytes
-	FROM SYS.TABLES T
-	INNER JOIN SYS.INDEXES I ON T.OBJECT_ID = I.OBJECT_ID
-	INNER JOIN SYS.PARTITIONS P ON I.OBJECT_ID = P.OBJECT_ID AND I.INDEX_ID = P.INDEX_ID
-	INNER JOIN SYS.ALLOCATION_UNITS A ON P.PARTITION_ID = A.CONTAINER_ID
-	AND T.IS_MS_SHIPPED = 0
-	GROUP BY T.NAME
-	) ObjectSizes ON ObjectSizes.TableName=ObjectName
-
-WHERE ObjectType='Table'
+LEFT OUTER JOIN (
+	SELECT OBJECT_ID ObjectId,NAME AS IndexName,TYPE_DESC  AS IndexType,IS_UNIQUE IsUnique
+	FROM SYS.INDEXES
+	WHERE IS_HYPOTHETICAL = 0 AND INDEX_ID != 0 
+	) IndexesT ON IndexesT.ObjectId=zz_vw_UserObjectsDetails.ObjectId
+WHERE zz_vw_UserObjectsDetails.ObjectType='Table'
 
 
 
