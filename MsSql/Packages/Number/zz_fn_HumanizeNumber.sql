@@ -5,14 +5,13 @@
 -- =============================================
 CREATE OR ALTER FUNCTION [dbo].[zz_fn_HumanizeNumber] 
 ( 
-	@InputNumber DECIMAL(38,7), 
-	@DigitsAfterPoint INT = 2 
+	@InputNumber DECIMAL(38,7)
 ) 
 RETURNS VARCHAR(256) 
 WITH SCHEMABINDING 
 AS 
 BEGIN 
 
-	RETURN 'ssssssss';
+	RETURN FORMAT(@InputNumber, 'N');
 
 END 
