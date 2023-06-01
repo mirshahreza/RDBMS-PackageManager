@@ -1,0 +1,34 @@
+-- =============================================
+-- Author:		Mohsen Mirshahreza
+-- Create date: 2023-06-01
+-- Description:	Select all table or view fields
+-- =============================================
+CREATE OR ALTER VIEW [dbo].[zz_vw_UserTablesViewsFields]
+AS
+
+SELECT 
+	Objs.NAME ParentObjectName,
+	C.NAME FieldName,
+    UPPER(T.NAME) FieldType,
+    ISNULL(I.IS_PRIMARY_KEY, 0) Pk,
+    C.IS_NULLABLE AllowNull,
+	(
+		CASE 
+			WHEN T.NAME NOT IN ('decimal','numeric','datetime2','datetimeoffset','time','varchar','nvarchar','char','nchar','varbinary') THEN NULL
+			ELSE C.MAX_LENGTH
+		END
+	) MaxLen,
+	C.IS_IDENTITY IsIdentity,
+	(SELECT SEED_VALUE		FROM SYS.IDENTITY_COLUMNS IDNT	WHERE IDNT.OBJECT_ID=C.OBJECT_ID AND IDNT.COLUMN_ID=C.COLUMN_ID) IdentityStart,
+	(SELECT INCREMENT_VALUE FROM SYS.IDENTITY_COLUMNS IDNT	WHERE IDNT.OBJECT_ID=C.OBJECT_ID AND IDNT.COLUMN_ID=C.COLUMN_ID) IdentityStep,
+	DEF.DEFINITION DbDefault,
+    I.IS_UNIQUE IsUnique,
+	C.COLUMN_ID Ordinal
+FROM			SYS.COLUMNS C
+INNER JOIN		SYS.TYPES T					ON C.USER_TYPE_ID = T.USER_TYPE_ID
+LEFT OUTER JOIN SYS.INDEX_COLUMNS IC		ON IC.OBJECT_ID = C.OBJECT_ID AND IC.COLUMN_ID = C.COLUMN_ID
+LEFT OUTER JOIN SYS.INDEXES I				ON IC.OBJECT_ID = I.OBJECT_ID AND IC.INDEX_ID = I.INDEX_ID
+LEFT OUTER JOIN SYS.DEFAULT_CONSTRAINTS DEF ON DEF.PARENT_OBJECT_ID = C.OBJECT_ID AND DEF.PARENT_COLUMN_ID = C.COLUMN_ID
+LEFT OUTER JOIN SYS.OBJECTS Objs ON Objs.OBJECT_ID=C.OBJECT_ID
+ORDER BY C.COLUMN_ID
+
