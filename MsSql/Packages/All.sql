@@ -1,3 +1,3 @@
-EXEC zzz_sp_Deploy 'String';
-EXEC zzz_sp_Deploy 'Number';
-EXEC zzz_sp_Deploy 'DbUtils';
+EXEC zzz_Deploy 'String';
+EXEC zzz_Deploy 'Number';
+EXEC zzz_Deploy 'DbUtils';
