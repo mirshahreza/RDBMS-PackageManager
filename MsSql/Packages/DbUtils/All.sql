@@ -5,5 +5,6 @@ EXEC zzz_sp_Deploy 'DbUtils/zz_vw_UserTablesOverview.sql';
 EXEC zzz_sp_Deploy 'DbUtils/zz_vw_UserTablesViewsFields.sql';
 EXEC zzz_sp_Deploy 'DbUtils/zz_vw_UserTablesFks.sql';
 EXEC zzz_sp_Deploy 'DbUtils/zz_sp_CreateTableIdentity.sql';
+EXEC zzz_sp_Deploy 'DbUtils/zz_sp_CreateTableGuid.sql';
 
 
