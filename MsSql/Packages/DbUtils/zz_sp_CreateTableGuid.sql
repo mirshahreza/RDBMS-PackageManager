@@ -11,7 +11,7 @@ BEGIN
 
 	DECLARE @S NVARCHAR(4000) = '
 CREATE TABLE [dbo].['+@TableName+'](
-	['+@PkFieldName+'] ['+@PkFieldType+'] NOT NULL,
+	['+@PkFieldName+'] [UNIQUEIDENTIFIER] NOT NULL,
  CONSTRAINT [PK_'+@TableName+'_'+@PkFieldName+'] PRIMARY KEY CLUSTERED 
 (
 	['+@PkFieldName+'] ASC
