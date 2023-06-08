@@ -8,8 +8,8 @@ AS
 
 SELECT	[FKs].[NAME] FkName,
 		OBJECT_NAME(FKs.PARENT_OBJECT_ID) TableName,
-		COL_NAME(FKColumns.PARENT_OBJECT_ID,FKColumns.PARENT_COLUMN_ID) FieldName,
-		RefTables.[NAME] TargetTable,RefColumns.[NAME] TargetField,
+		COL_NAME(FKColumns.PARENT_OBJECT_ID,FKColumns.PARENT_COLUMN_ID) ColumnName,
+		RefTables.[NAME] TargetTable,RefColumns.[NAME] TargetColumn,
         ~[FKs].IS_DISABLED EnforceRelation
 FROM 
    SYS.FOREIGN_KEYS AS FKs
