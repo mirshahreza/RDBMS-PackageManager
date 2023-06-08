@@ -1,15 +1,15 @@
 -- =============================================
 -- Author:		Mohsen Mirshahreza
 -- Create date: 2023-06-01
--- Description:	Select all table or view fields
+-- Description:	Select all table or view columns
 -- =============================================
 CREATE OR ALTER VIEW [dbo].[zz_UserTablesViewsColumns]
 AS
 
 SELECT 
 	OBJS.NAME ParentObjectName,
-	C.NAME FieldName,
-    UPPER(T.NAME) FieldType,
+	C.NAME ColumnName,
+    UPPER(T.NAME) ColumnType,
     ISNULL((
 		SELECT CAST(COUNT(*) AS BIT)
 		FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
