@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Drop a table from a database
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[zz_DropTable]
+CREATE OR ALTER PROCEDURE [dbo].[Zz_DropTable]
 	@TableName VARCHAR(128)
 AS
 

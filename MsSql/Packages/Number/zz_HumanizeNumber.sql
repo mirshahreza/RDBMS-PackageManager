@@ -3,7 +3,7 @@
 -- Create date: 2023-05-27
 -- Description:	Turns numbers to human readable format
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[zz_HumanizeNumber] 
+CREATE OR ALTER FUNCTION [dbo].[Zz_HumanizeNumber] 
 ( 
 	@InputNumber DECIMAL(38,7)
 ) 

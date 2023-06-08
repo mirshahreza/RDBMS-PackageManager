@@ -3,7 +3,7 @@
 -- Create date: 2023-05-17
 -- Description:	To Trim strings : LTRIM and RTRIM together
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[zz_Trim]
+CREATE OR ALTER FUNCTION [dbo].[Zz_Trim]
 (
 	@String NVARCHAR(4000)
 )

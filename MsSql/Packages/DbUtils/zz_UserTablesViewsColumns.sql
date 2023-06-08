@@ -3,7 +3,7 @@
 -- Create date: 2023-06-01
 -- Description:	Select all table or view columns
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[zz_UserTablesViewsColumns]
+CREATE OR ALTER VIEW [dbo].[Zz_UserTablesViewsColumns]
 AS
 
 SELECT 

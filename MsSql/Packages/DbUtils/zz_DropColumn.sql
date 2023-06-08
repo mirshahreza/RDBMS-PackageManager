@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Drop a field from a table
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[zz_DropColumn]
+CREATE OR ALTER PROCEDURE [dbo].[Zz_DropColumn]
 	@TableName VARCHAR(128), @ColumnName VARCHAR(64)
 AS
 

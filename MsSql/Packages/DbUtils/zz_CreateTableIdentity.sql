@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Create a table with a Identity column
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[zz_CreateTableIdentity]
+CREATE OR ALTER PROCEDURE [dbo].[Zz_CreateTableIdentity]
 	@TableName VARCHAR(128), @PkFieldName VARCHAR(64) = 'Id', @PkFieldType VARCHAR(32) = 'INT',@PkIdentityStart INT=1,@PkIdentityStep INT=1
 AS
 

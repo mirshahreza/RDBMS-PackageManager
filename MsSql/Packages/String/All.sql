@@ -1,6 +1,6 @@
-EXEC zzz_Deploy 'String/zz_SplitString.sql';
-EXEC zzz_Deploy 'String/zz_NthItem.sql';
-EXEC zzz_Deploy 'String/zz_Trim.sql';
-EXEC zzz_Deploy 'String/zz_Fix2Char.sql';
-EXEC zzz_Deploy 'String/zz_CountChar.sql';
-EXEC zzz_Deploy 'String/zz_CountWord.sql';
+EXEC Zzz_Deploy 'String/Zz_SplitString.sql';
+EXEC Zzz_Deploy 'String/Zz_NthItem.sql';
+EXEC Zzz_Deploy 'String/Zz_Trim.sql';
+EXEC Zzz_Deploy 'String/Zz_Fix2Char.sql';
+EXEC Zzz_Deploy 'String/Zz_CountChar.sql';
+EXEC Zzz_Deploy 'String/Zz_CountWord.sql';

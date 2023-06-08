@@ -3,7 +3,7 @@
 -- Create date: 2023-05-18
 -- Description:	Calculate count of existing a word in a string
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[zz_CountWord] 
+CREATE OR ALTER FUNCTION [dbo].[Zz_CountWord] 
 ( 
     @InputPhrase NVARCHAR(4000), 
     @SearchWord NVARCHAR(64) 

@@ -3,7 +3,7 @@
 -- Create date: 2023-05-17
 -- Description:	To format numbers as formatted volumes / SELECT [dbo].[zz_FormatBytes] (6542444431,'B') : 6.09 GB
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[zz_FormatBytes] 
+CREATE OR ALTER FUNCTION [dbo].[Zz_FormatBytes] 
 ( 
 	@InputNumber DECIMAL(38,7), 
 	@InputUOM VARCHAR(5) = 'Bytes' 

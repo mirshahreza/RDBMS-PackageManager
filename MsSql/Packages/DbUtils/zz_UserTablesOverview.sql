@@ -1,13 +1,13 @@
 /*
-EXEC zzz_Deploy 'DbUtils/zz_UserObjectsDetails.sql'
-EXEC zzz_Deploy 'DbUtils/zz_UserTablesIndexes.sql'
+EXEC Zzz_Deploy 'DbUtils/Zz_UserObjectsDetails.sql'
+EXEC Zzz_Deploy 'DbUtils/Zz_UserTablesIndexes.sql'
 */
 -- =============================================
 -- Author:		Mohsen Mirshahreza
 -- Create date: 2023-05-27
 -- Description:	Select all tables with some quick statistics created by user in details
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[zz_UserTablesOverview]
+CREATE OR ALTER VIEW [dbo].[Zz_UserTablesOverview]
 AS
 
 SELECT ObjectId,ObjectName, 

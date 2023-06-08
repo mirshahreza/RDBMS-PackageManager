@@ -1,14 +1,14 @@
-EXEC zzz_Deploy 'DbUtils/zz_UserObjectsDetails.sql';
-EXEC zzz_Deploy 'DbUtils/zz_UserObjectsOverview.sql';
-EXEC zzz_Deploy 'DbUtils/zz_UserTablesIndexes.sql';
-EXEC zzz_Deploy 'DbUtils/zz_UserTablesOverview.sql';
-EXEC zzz_Deploy 'DbUtils/zz_UserTablesViewsColumns.sql';
-EXEC zzz_Deploy 'DbUtils/zz_UserTablesFks.sql';
-EXEC zzz_Deploy 'DbUtils/zz_CreateTableIdentity.sql';
-EXEC zzz_Deploy 'DbUtils/zz_CreateTableGuid.sql';
-EXEC zzz_Deploy 'DbUtils/zz_CreateColumn.sql';
-EXEC zzz_Deploy 'DbUtils/zz_DropColumn.sql';
-EXEC zzz_Deploy 'DbUtils/zz_DropTable.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserObjectsDetails.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserObjectsOverview.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserTablesIndexes.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserTablesOverview.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserTablesViewsColumns.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserTablesFks.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_CreateTableIdentity.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_CreateTableGuid.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_CreateColumn.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_DropColumn.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_DropTable.sql';
 
 
 

@@ -3,7 +3,7 @@
 -- Create date: 2023-05-18
 -- Description:	Calculate count of existing a char in a string
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[zz_CountChar] 
+CREATE OR ALTER FUNCTION [dbo].[Zz_CountChar] 
 ( 
     @pInput VARCHAR(1000), 
     @pSearchChar CHAR(1) 

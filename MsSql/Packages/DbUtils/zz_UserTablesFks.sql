@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Select all Fks for tables
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[zz_UserTablesFks]
+CREATE OR ALTER VIEW [dbo].[Zz_UserTablesFks]
 AS
 
 SELECT	[FKs].[NAME] FkName,

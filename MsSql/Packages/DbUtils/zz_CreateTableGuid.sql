@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Create a table with a Guid column
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[zz_CreateTableGuid]
+CREATE OR ALTER PROCEDURE [dbo].[Zz_CreateTableGuid]
 	@TableName VARCHAR(128), @PkFieldName VARCHAR(64) = 'Id'
 AS
 

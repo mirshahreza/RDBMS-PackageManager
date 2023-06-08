@@ -3,7 +3,7 @@
 -- Create date: 2023-05-13
 -- Description:	To split a separated string to rows
 -- =============================================
-CREATE OR ALTER FUNCTION zz_SplitString 
+CREATE OR ALTER FUNCTION Zz_SplitString 
 (
 	@String NVARCHAR(4000),@Splitter CHAR(1)
 )
