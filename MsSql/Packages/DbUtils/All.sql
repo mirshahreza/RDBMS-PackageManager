@@ -9,6 +9,7 @@ EXEC Zzz_Deploy 'DbUtils/Zz_CreateTableGuid.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateColumn.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_DropColumn.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_DropTable.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_UserProceduresFunctionsParameters.sql';
 
 
 
