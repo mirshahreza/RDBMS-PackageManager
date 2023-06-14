@@ -12,13 +12,13 @@ GO
 RECONFIGURE;  
 GO  
 
-CREATE OR ALTER   PROCEDURE [dbo].[Zzz_Deploy] @PackageName VARCHAR(512)
+CREATE OR ALTER   PROCEDURE [dbo].[Zzz_Deploy] @PackageName VARCHAR(512)=NULL
 AS
 BEGIN
 
 	DECLARE	@rr INT,@rv NVARCHAR(4000);
 	DECLARE @BaseURL NVARCHAR(4000) = N'https://raw.githubusercontent.com/mirshahreza/RDBMS-PackageManager/master/MsSql/Packages/';
-	DECLARE @PackageFullURL NVARCHAR(4000) = @BaseURL + @PackageName;
+	DECLARE @PackageFullURL NVARCHAR(4000) = @BaseURL + ISNULL(@PackageName,'');
 
 	IF(@PackageFullURL NOT LIKE N'%.sql') SET @PackageFullURL = @PackageFullURL + '/All.sql'
 
