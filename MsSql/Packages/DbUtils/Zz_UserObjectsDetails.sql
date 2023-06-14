@@ -19,7 +19,7 @@ SELECT OBJECT_ID ObjectId, NAME AS ObjectName ,'ScalarFunction'			ObjectType,
 	CREATE_DATE CreatedOn, MODIFY_DATE UpdatedOn, 4 ViewOrder FROM SYS.OBJECTS WHERE TYPE_DESC='SQL_SCALAR_FUNCTION'
 UNION ALL 																			   
 SELECT OBJECT_ID ObjectId, NAME AS ObjectName ,'TableFunction'	
-	ObjectType,	CREATE_DATE CreatedOn, MODIFY_DATE UpdatedOn, 4 ViewOrder FROM SYS.OBJECTS WHERE TYPE_DESC='SQL_TABLE_VALUED_FUNCTION'
+	ObjectType,	CREATE_DATE CreatedOn, MODIFY_DATE UpdatedOn, 4 ViewOrder FROM SYS.OBJECTS WHERE TYPE_DESC LIKE '%TABLE_VALUED%'
 
 
 

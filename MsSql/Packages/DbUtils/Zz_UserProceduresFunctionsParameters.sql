@@ -10,7 +10,7 @@ SELECT
    SCHEMA_NAME(SO.SCHEMA_ID) AS [Schema],
    SO.Name AS [ObjectName],
    SO.Type_Desc AS [ObjectType],
-   PM.Parameter_ID AS [ParameterID],
+   PM.Parameter_ID AS [ViewOrder],
    CASE WHEN PM.Parameter_ID = 0 THEN 'Returns' ELSE PM.Name END AS [ParameterName],
    TYPE_NAME(PM.User_Type_ID) AS [ParameterDataType],
    CASE
