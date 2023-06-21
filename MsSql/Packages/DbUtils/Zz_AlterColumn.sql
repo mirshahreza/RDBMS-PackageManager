@@ -10,7 +10,7 @@ AS
 BEGIN
 
 	DECLARE @S NVARCHAR(4000);
-	SET @S = 'ALTER TABLE ' + @TableName + ' ADD ' + @ColumnName + ' ' + @ColumnTypeSize;
+	SET @S = 'ALTER TABLE ' + @TableName + ' ALTER COLUMN ' + @ColumnName + ' ' + @ColumnTypeSize;
 	IF(@AllowNull=1)
 	BEGIN
 		SET @S = @S + ' NULL'
