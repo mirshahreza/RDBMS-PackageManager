@@ -21,6 +21,8 @@ EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyProcedure.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyTableFunction.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyScalarFunction.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_AlterColumn.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_CreateOrAlterFk.sql';
+
 
 
 

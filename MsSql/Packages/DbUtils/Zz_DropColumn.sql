@@ -10,7 +10,7 @@ AS
 BEGIN
 
 	DECLARE @S NVARCHAR(4000);
-	SET @S = 'ALTER TABLE ' + @TableName + ' DROP COLUMN ' + @ColumnName;
+	SET @S = 'ALTER TABLE ' + @TableName + ' DROP COLUMN IF EXISTS ' + @ColumnName;
 	EXECUTE SP_EXECUTESQL @S;
 
 END
