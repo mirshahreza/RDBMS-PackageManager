@@ -11,6 +11,8 @@ EXEC Zzz_Deploy 'DbUtils/Zz_DropColumn.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_DropTable.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_DropView.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_DropProcedure.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_DropFunction.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_ObjectExist.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_UserProceduresFunctionsParameters.sql';
 
 

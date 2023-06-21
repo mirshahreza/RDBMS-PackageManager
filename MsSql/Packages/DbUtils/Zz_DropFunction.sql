@@ -1,6 +1,6 @@
 -- =============================================
 -- Author:		Mohsen Mirshahreza
--- Create date: 2023-06-02
+-- Create date: 2023-06-21
 -- Description:	Drop a Function from a database
 -- =============================================
 CREATE OR ALTER PROCEDURE [dbo].[Zz_DropFunction]
