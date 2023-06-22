@@ -18,7 +18,7 @@ BEGIN
 	BEGIN
 		SET @S = '
 ALTER TABLE '+@BaseTableName+'
-DROP CONSTRAINT '+@FkName+'
+DROP CONSTRAINT IF EXISTS '+@FkName+'
 ;
 		';
 	END
