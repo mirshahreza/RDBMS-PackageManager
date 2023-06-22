@@ -16,6 +16,7 @@ EXEC Zzz_Deploy 'DbUtils/Zz_DropFunction.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_ObjectExist.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_TruncateTable.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_RenameColumn.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_RenameTable.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyView.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyProcedure.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyTableFunction.sql';
