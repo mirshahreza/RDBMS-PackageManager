@@ -20,10 +20,10 @@ SELECT TOP 1 CreateOrAlter FROM
 		FROM (
 			SELECT
 				DEFINITION AS ObjectDef,
-				CHARINDEX('Zz_CreateTableGuid', DEFINITION) AS ObjectNameCharIndex,
-				SUBSTRING(DEFINITION,0,CHARINDEX('Zz_CreateTableGuid', DEFINITION)) AS ObjectDefUntilName
+				CHARINDEX(@ObjectName, DEFINITION) AS ObjectNameCharIndex,
+				SUBSTRING(DEFINITION,0,CHARINDEX(@ObjectName, DEFINITION)) AS ObjectDefUntilName
 			FROM SYS.SQL_MODULES 
-			WHERE OBJECT_ID= OBJECT_ID('Zz_CreateTableGuid')
+			WHERE OBJECT_ID= OBJECT_ID(@ObjectName)
 		) T
 	) T
 ) T
