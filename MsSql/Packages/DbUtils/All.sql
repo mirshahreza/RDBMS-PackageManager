@@ -24,6 +24,7 @@ EXEC Zzz_Deploy 'DbUtils/Zz_CreateEmptyScalarFunction.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_AlterColumn.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_CreateOrAlterFk.sql';
 EXEC Zzz_Deploy 'DbUtils/Zz_DropFk.sql';
+EXEC Zzz_Deploy 'DbUtils/Zz_GetCreateOrAlter.sql';
 
 
 
