@@ -13,7 +13,7 @@ SELECT TOP 1 CreateOrAlter FROM
 (
 	SELECT ObjectDef,ObjectNameCharIndex,ObjectDefUntilName,MainPhrase
 		,CHARINDEX (MainPhrase ,ObjectDefUntilName) GG
-		,REPLACE(ObjectDef,MainPhrase,(REPLACE(MainPhrase,'CREATE ','CREATE OR ALTER'))) AS CreateOrAlter
+		,REPLACE(ObjectDef,MainPhrase,(REPLACE(MainPhrase,'CREATE ','CREATE OR ALTER '))) AS CreateOrAlter
 	FROM (
 		SELECT ObjectDef,ObjectNameCharIndex,ObjectDefUntilName 
 			, LTRIM(RTRIM(REVERSE(SUBSTRING(REVERSE(ObjectDefUntilName),0,CHARINDEX(' ETAERC', REVERSE(ObjectDefUntilName))+7)))) AS MainPhrase
