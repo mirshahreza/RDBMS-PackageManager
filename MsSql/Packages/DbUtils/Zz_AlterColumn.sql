@@ -30,8 +30,8 @@ BEGIN
 						),'NODEFAULT');
 
 	SET @S ='
-ALTER TABLE ' + @TableName + ' ALTER COLUMN ' + @ColumnName + ' ' + @ColumnTypeSize + @Allow + ';
 ALTER TABLE ' + @TableName + ' DROP CONSTRAINT IF EXISTS ' + @DefaultName+';
+ALTER TABLE ' + @TableName + ' ALTER COLUMN ' + @ColumnName + ' ' + @ColumnTypeSize + @Allow + ';
 IF('''+@Default+'''!='''')
 BEGIN
 	ALTER TABLE ' + @TableName + ' ADD CONSTRAINT ' + @ColumnName + '_Default DEFAULT '''+@Default+''' FOR ' + @ColumnName + '
@@ -39,4 +39,5 @@ END
 ;';
 
 	EXECUTE SP_EXECUTESQL @S;
+
 END
