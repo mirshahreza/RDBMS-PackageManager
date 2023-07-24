@@ -11,7 +11,7 @@ BEGIN
 
 	DECLARE @S NVARCHAR(4000);
 	SET @S = '
-ALTER   FUNCTION [DBO].['+@ScalarFunctionName+'] 
+CREATE   FUNCTION [DBO].['+@ScalarFunctionName+'] 
 ( 
     @Param1 INT, @Param2 INT 
 )
