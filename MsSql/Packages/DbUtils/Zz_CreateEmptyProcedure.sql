@@ -15,7 +15,7 @@ CREATE PROCEDURE [DBO].['+@ProcedureName+']
 	@Param1 INT
 AS
 BEGIN
-	SELECT Param1;
+	SELECT Param1 A;
 END
 ';
 
