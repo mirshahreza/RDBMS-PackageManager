@@ -34,7 +34,7 @@ ALTER TABLE ' + @TableName + ' DROP CONSTRAINT IF EXISTS ' + @DefaultName+';
 ALTER TABLE ' + @TableName + ' ALTER COLUMN ' + @ColumnName + ' ' + @ColumnTypeSize + @Allow + ';
 IF('''+@Default+'''!='''')
 BEGIN
-	ALTER TABLE ' + @TableName + ' ADD CONSTRAINT ' + @ColumnName + '_Default DEFAULT '''+@Default+''' FOR ' + @ColumnName + '
+	ALTER TABLE ' + @TableName + ' ADD CONSTRAINT ' + @TableName + '_' + @ColumnName + '_Default DEFAULT '''+@Default+''' FOR ' + @ColumnName + '
 END
 ;';
 
