@@ -3,7 +3,7 @@
 -- Create date: 2023-07-08
 -- Description:	Generates Create Or Alter
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_GetCreateOrAlter]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_GetCreateOrAlter]
 	@ObjectName VARCHAR(128)
 AS
 

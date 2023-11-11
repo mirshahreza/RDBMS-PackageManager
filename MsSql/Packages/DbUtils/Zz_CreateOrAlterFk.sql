@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Creates or Alters a Fk
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_CreateOrAlterFk]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_CreateOrAlterFk]
 	@FkName VARCHAR(128),
 	@BaseTableName VARCHAR(128), @BaseColumnName VARCHAR(64) , 
 	@TargetTableName VARCHAR(128), @TargetColumnName VARCHAR(64) , 

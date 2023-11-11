@@ -4,7 +4,7 @@
 -- Description:	check if exist an object : table,view,procedure,function,fk,pk
 -- =============================================
 
-CREATE OR ALTER FUNCTION [dbo].[Zz_ObjectExist] 
+CREATE OR ALTER FUNCTION [DBO].[Zz_ObjectExist] 
 ( 
 	@ObjectName VARCHAR(128)
 ) 

@@ -3,7 +3,7 @@
 -- Create date: 2023-05-27
 -- Description:	Select all tables with all indexes
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[Zz_SelectTablesIndexes]
+CREATE OR ALTER VIEW [DBO].[Zz_SelectTablesIndexes]
 AS
 
 SELECT zz_UserObjectsDetails.ObjectId ObjectId, zz_UserObjectsDetails.ObjectName TableName, IndexesT.IndexName,IndexType,IsUnique

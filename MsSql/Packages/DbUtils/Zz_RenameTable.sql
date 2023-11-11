@@ -3,7 +3,7 @@
 -- Create date: 2023-06-21
 -- Description:	Rename a table 
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_RenameTable]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_RenameTable]
 	@TableName VARCHAR(128),@NewName VARCHAR(128)
 AS
 

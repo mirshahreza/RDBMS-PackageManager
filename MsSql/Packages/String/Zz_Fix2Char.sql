@@ -3,7 +3,7 @@
 -- Create date: 2023-05-18
 -- Description:	Adds a zero before if the lenght is equal to 1
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[Zz_Fix2Char] ( @S VARCHAR(8) )
+CREATE OR ALTER FUNCTION [DBO].[Zz_Fix2Char] ( @S VARCHAR(8) )
 RETURNS VARCHAR(8)
 BEGIN
 

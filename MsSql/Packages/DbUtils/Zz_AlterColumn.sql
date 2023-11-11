@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	alter a field
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_AlterColumn]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_AlterColumn]
 	@TableName VARCHAR(128), @ColumnName VARCHAR(64), @ColumnTypeSize VARCHAR(64), @AllowNull BIT = 1,@Default NVARCHAR(256) = ''
 AS
 

@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Add a field to a table
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_CreateColumn]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_CreateColumn]
 	@TableName VARCHAR(128), @ColumnName VARCHAR(64) , @ColumnTypeSize VARCHAR(64) , @AllowNull BIT = 1
 AS
 

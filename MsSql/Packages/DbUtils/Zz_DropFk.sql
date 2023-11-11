@@ -3,7 +3,7 @@
 -- Create date: 2023-07-04
 -- Description:	Drops a Fk
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_DropFk]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_DropFk]
 	@FkName VARCHAR(128),
 	@BaseTableName VARCHAR(128)
 AS

@@ -3,7 +3,7 @@
 -- Create date: 2023-06-14
 -- Description:	Select all parameters for Procedures and Functions
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[Zz_SelectProceduresFunctionsParameters]
+CREATE OR ALTER VIEW [DBO].[Zz_SelectProceduresFunctionsParameters]
 AS
 
 SELECT 

@@ -7,7 +7,7 @@ EXEC Zzz_Deploy 'DbUtils/Zz_SelectTablesIndexes.sql'
 -- Create date: 2023-05-27
 -- Description:	Select all tables with some quick statistics created by user in details
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[Zz_SelectTablesOverview]
+CREATE OR ALTER VIEW [DBO].[Zz_SelectTablesOverview]
 AS
 
 SELECT ObjectId,ObjectName, 

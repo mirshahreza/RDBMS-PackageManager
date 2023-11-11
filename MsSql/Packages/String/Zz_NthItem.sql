@@ -3,7 +3,7 @@
 -- Create date: 2023-05-12
 -- Description:	To get nth item of a separated string
 -- =============================================
-CREATE OR ALTER FUNCTION [dbo].[Zz_NthItem]
+CREATE OR ALTER FUNCTION [DBO].[Zz_NthItem]
 (
 	@String NVARCHAR(4000),@Splitter CHAR(1),@N INT
 )

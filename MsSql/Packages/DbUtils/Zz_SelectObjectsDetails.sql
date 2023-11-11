@@ -3,7 +3,7 @@
 -- Create date: 2023-05-25
 -- Description:	Select all objects (Table,View,Procedure,ScalarFunction,TableValuedFunction) created by user in details
 -- =============================================
-CREATE OR ALTER VIEW [dbo].[Zz_SelectObjectsDetails]
+CREATE OR ALTER VIEW [DBO].[Zz_SelectObjectsDetails]
 AS
 
 SELECT OBJECT_ID ObjectId, NAME AS ObjectName ,'Table'					ObjectType,	

@@ -3,7 +3,7 @@
 -- Create date: 2023-06-21
 -- Description:	Rename a column 
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_RenameColumn]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_RenameColumn]
 	@TableName VARCHAR(128),@InitialName VARCHAR(128),@NewName VARCHAR(128)
 AS
 

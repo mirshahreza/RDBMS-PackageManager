@@ -3,7 +3,7 @@
 -- Create date: 2023-06-02
 -- Description:	Drop a view from a database
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_DropView]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_DropView]
 	@ViewName VARCHAR(128)
 AS
 

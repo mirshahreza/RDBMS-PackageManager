@@ -3,7 +3,7 @@
 -- Create date: 2023-06-21
 -- Description:	Drop a Function from a database
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_DropFunction]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_DropFunction]
 	@Function VARCHAR(128)
 AS
 

@@ -3,7 +3,7 @@
 -- Create date: 2023-06-21
 -- Description:	Truncate a table from 
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_TruncateTable]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_TruncateTable]
 	@TableName VARCHAR(128)
 AS
 

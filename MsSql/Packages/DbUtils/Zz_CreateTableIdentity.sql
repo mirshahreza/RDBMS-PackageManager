@@ -6,7 +6,7 @@ EXEC Zzz_Deploy 'DbUtils/Zz_ObjectExist.sql'
 -- Create date: 2023-06-02
 -- Description:	Create a table with a Identity column
 -- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[Zz_CreateTableIdentity]
+CREATE OR ALTER PROCEDURE [DBO].[Zz_CreateTableIdentity]
 	@TableName VARCHAR(128), @PkFieldName VARCHAR(64) = 'Id', @PkFieldType VARCHAR(32) = 'INT',
 	@PkIdentityStart INT=1,@PkIdentityStep INT=1,
 	@IgnoreIfExist BIT=1
@@ -14,13 +14,13 @@ AS
 
 BEGIN
 
-	DECLARE @ObjectExist BIT = dbo.Zz_ObjectExist(@TableName);
+	DECLARE @ObjectExist BIT = DBO.Zz_ObjectExist(@TableName);
 	IF(@ObjectExist=1 AND @IgnoreIfExist=1) RETURN;
 
-	EXEC dbo.Zz_DropTable @TableName;
+	EXEC DBO.Zz_DropTable @TableName;
 
 	DECLARE @S NVARCHAR(4000) = '
-CREATE TABLE [dbo].['+@TableName+'](
+CREATE TABLE [DBO].['+@TableName+'](
 	['+@PkFieldName+'] ['+@PkFieldType+'] IDENTITY('+CAST(@PkIdentityStart AS VARCHAR)+','+CAST(@PkIdentityStep AS VARCHAR)+') NOT NULL,
  CONSTRAINT [PK_'+@TableName+'_'+@PkFieldName+'] PRIMARY KEY CLUSTERED 
 (
