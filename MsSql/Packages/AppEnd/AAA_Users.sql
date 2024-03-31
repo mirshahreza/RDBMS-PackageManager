@@ -44,8 +44,6 @@ ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginLocked_Default]  DEFAULT ('0
 
 ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginFailed_Default]  DEFAULT ('0') FOR [LoginTryFails];
 
-ALTER TABLE [DBO].[AAA_Users] CHECK CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id];
-
 INSERT INTO AAA_Users	
 		(IsBuiltIn,UserName,Email,Mobile,[Password],IsActive,LoginLocked,LoginTry,Settings,CreatedBy,CreatedOn) 
 VALUES	(1,'admin','mirshahreza@gmail.com','989122026228','D7B91B6A9FA705E968B2C859FDDE9457',1,0,0,'{}',10000,GETDATE());
