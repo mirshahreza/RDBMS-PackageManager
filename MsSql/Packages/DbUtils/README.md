@@ -5,4 +5,4 @@
 
 OR <br />
 
->EXEC dbo.zzz_Deploy 'DbUtils/All.sql' <br />
+>EXEC dbo.zzz_Deploy 'DbUtils/_.sql' <br />

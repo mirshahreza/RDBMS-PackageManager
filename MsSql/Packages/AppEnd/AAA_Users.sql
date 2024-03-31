@@ -3,7 +3,7 @@
 -- Create date: 2024-03-31
 -- Description:	Table to hold users - AppEnd LowCode system
 -- =============================================
-CREATE TABLE [dbo].[AAA_Users](
+CREATE TABLE [DBO].[AAA_Users](
 	[Id] [bigint] IDENTITY(100000,1) NOT NULL,
 	[Gender] [int] NULL,
 	[IsBuiltIn] [bit] NOT NULL,
@@ -37,15 +37,15 @@ CREATE TABLE [dbo].[AAA_Users](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
 
-ALTER TABLE [dbo].[AAA_Users] ADD  CONSTRAINT [IsBuiltIn_Default]  DEFAULT ('0') FOR [IsBuiltIn];
+ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [IsBuiltIn_Default]  DEFAULT ('0') FOR [IsBuiltIn];
 
-ALTER TABLE [dbo].[AAA_Users] ADD  CONSTRAINT [IsActive_Default]  DEFAULT ('1') FOR [IsActive];
+ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [IsActive_Default]  DEFAULT ('1') FOR [IsActive];
 
-ALTER TABLE [dbo].[AAA_Users] ADD  CONSTRAINT [LoginLocked_Default]  DEFAULT ('0') FOR [LoginLocked];
+ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginLocked_Default]  DEFAULT ('0') FOR [LoginLocked];
 
-ALTER TABLE [dbo].[AAA_Users] ADD  CONSTRAINT [LoginFailed_Default]  DEFAULT ('0') FOR [LoginTryFails];
+ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginFailed_Default]  DEFAULT ('0') FOR [LoginTryFails];
 
-ALTER TABLE [dbo].[AAA_Users]  WITH CHECK ADD  CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id] FOREIGN KEY([Gender])
-REFERENCES [dbo].[Common_BaseInfo] ([Id]);
+ALTER TABLE [DBO].[AAA_Users]  WITH CHECK ADD  CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id] FOREIGN KEY([Gender])
+REFERENCES [DBO].[Common_BaseInfo] ([Id]);
 
-ALTER TABLE [dbo].[AAA_Users] CHECK CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id];
+ALTER TABLE [DBO].[AAA_Users] CHECK CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id];
