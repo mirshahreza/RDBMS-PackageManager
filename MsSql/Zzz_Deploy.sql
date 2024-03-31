@@ -49,7 +49,7 @@ BEGIN
 	END
 	ELSE
 	BEGIN
-		PRINT @PackageName + ' fetch problem.'
+		PRINT @PackageFullURL + ' fetch problem.'
 		PRINT 'Status Code : ' + CAST(@rr AS NVARCHAR);
 		PRINT 'Problem details : ' + @rv;
 	END
