@@ -14,9 +14,9 @@ SELECT ObjectId,ObjectName,
 	(SELECT COUNT(1) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ObjectName) FieldsCount, 
 	(SELECT TOP 1 ROWS FROM SYS.SYSINDEXES I WHERE INDID IN (0,1) AND I.Id = ObjectId) RecordsCount,
 	ObjectSizes.TotalSpaceInBytes TotalSpaceInBytes,
-	(SELECT COUNT(*) FROM zz_UserTablesIndexes Inds WHERE Inds.ObjectId=zz_UserObjectsDetails.ObjectId) IndexesCount,
+	(SELECT COUNT(*) FROM zz_UserTablesIndexes Inds WHERE Inds.ObjectId=Zz_SelectObjectsDetails.ObjectId) IndexesCount,
 	CreatedOn, UpdatedOn
-FROM zz_UserObjectsDetails
+FROM Zz_SelectObjectsDetails
 LEFT OUTER JOIN 
 	(
 	SELECT T.NAME AS TableName,(SUM(A.TOTAL_PAGES) * 8) AS TotalSpaceInBytes
