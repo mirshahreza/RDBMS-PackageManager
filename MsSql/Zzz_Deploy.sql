@@ -20,7 +20,7 @@ BEGIN
 	DECLARE @BaseURL NVARCHAR(4000) = N'https://raw.githubusercontent.com/mirshahreza/RDBMS-PackageManager/master/MsSql/Packages/';
 	DECLARE @PackageFullURL NVARCHAR(4000) = @BaseURL + ISNULL(@PackageName,'');
 
-	IF(@PackageFullURL NOT LIKE N'%.sql') SET @PackageFullURL = @PackageFullURL + '/_.sql'
+	IF(@PackageFullURL NOT LIKE N'%.sql') SET @PackageFullURL = @PackageFullURL + '/.sql'
 
 	DECLARE @status INT;
 	DECLARE @responseText AS TABLE(responseText NVARCHAR(MAX));
