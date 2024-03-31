@@ -3,8 +3,6 @@
 -- Create date: 2024-03-31
 -- Description:	Table to hold base information - AppEnd LowCode system
 -- =============================================
-EXEC Zz_DropTable 'Common_BaseInfo';
-
 CREATE TABLE [DBO].[Common_BaseInfo](
 	[Id] [int] IDENTITY(10000,1) NOT NULL,
 	[ParentId] [int] NULL,

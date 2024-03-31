@@ -3,8 +3,6 @@
 -- Create date: 2024-03-31
 -- Description:	Table to hold users - AppEnd LowCode system
 -- =============================================
-EXEC Zz_DropTable 'AAA_Users';
-
 CREATE TABLE [DBO].[AAA_Users](
 	[Id] [bigint] IDENTITY(100000,1) NOT NULL,
 	[IsBuiltIn] [bit] NOT NULL,
