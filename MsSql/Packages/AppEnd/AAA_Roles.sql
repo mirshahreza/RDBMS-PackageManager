@@ -19,3 +19,7 @@ CREATE TABLE [DBO].[AAA_Roles](
 ) ON [PRIMARY];
 
 ALTER TABLE [DBO].[AAA_Roles] ADD  CONSTRAINT [AppEnd_Roles_IsBuiltIn_Default]  DEFAULT ('0') FOR [IsBuiltIn];
+
+INSERT INTO AAA_Roles
+		(IsBuiltIn,RoleName,Note,CreatedBy,CreatedOn) 
+VALUES	(1,'admin','',10000,GETDATE());

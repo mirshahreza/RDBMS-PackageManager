@@ -5,7 +5,6 @@
 -- =============================================
 CREATE TABLE [DBO].[AAA_Users](
 	[Id] [bigint] IDENTITY(100000,1) NOT NULL,
-	[Gender] [int] NULL,
 	[IsBuiltIn] [bit] NOT NULL,
 	[UserName] [nvarchar](64) NOT NULL,
 	[Email] [varchar](64) NULL,
@@ -49,3 +48,7 @@ ALTER TABLE [DBO].[AAA_Users]  WITH CHECK ADD  CONSTRAINT [AppEnd_Users_Gender_A
 REFERENCES [DBO].[Common_BaseInfo] ([Id]);
 
 ALTER TABLE [DBO].[AAA_Users] CHECK CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id];
+
+INSERT INTO AAA_Users	
+		(IsBuiltIn,UserName,Email,Mobile,[Password],IsActive,LoginLocked,LoginTry,Settings,CreatedBy,CreatedOn) 
+VALUES	(1,'admin','mirshahreza@gmail.com','989122026228','D7B91B6A9FA705E968B2C859FDDE9457',1,0,0,'{}',10000,GETDATE());
