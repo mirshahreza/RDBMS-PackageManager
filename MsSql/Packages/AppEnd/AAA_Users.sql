@@ -44,9 +44,6 @@ ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginLocked_Default]  DEFAULT ('0
 
 ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginFailed_Default]  DEFAULT ('0') FOR [LoginTryFails];
 
-ALTER TABLE [DBO].[AAA_Users]  WITH CHECK ADD  CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id] FOREIGN KEY([Gender])
-REFERENCES [DBO].[Common_BaseInfo] ([Id]);
-
 ALTER TABLE [DBO].[AAA_Users] CHECK CONSTRAINT [AppEnd_Users_Gender_AppEnd_BaseInfo_Id];
 
 INSERT INTO AAA_Users	
