@@ -3,6 +3,8 @@
 -- Create date: 2024-03-31
 -- Description:	Table to hold users activities - AppEnd LowCode system
 -- =============================================
+EXEC Zz_DropTable 'Common_ActivityLog';
+
 CREATE TABLE [DBO].[Common_ActivityLog](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Method] [varchar](128) NOT NULL,

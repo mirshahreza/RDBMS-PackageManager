@@ -3,6 +3,8 @@
 -- Create date: 2024-03-31
 -- Description:	Table to hold roles of users - AppEnd LowCode system
 -- =============================================
+EXEC Zz_DropTable 'AAA_Users_R_Roles';
+
 CREATE TABLE [DBO].[AAA_Users_R_Roles](
 	[Id] [bigint] IDENTITY(1000000,1) NOT NULL,
 	[UserId] [bigint] NOT NULL,
