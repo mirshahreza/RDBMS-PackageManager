@@ -2,7 +2,7 @@
 Packages for MsSql 
 
 ## Setup database
-Download and Run the zzz_Deploy.sql
+Download and Run the Zzz_Deploy.sql
 
 ## Usage 
 Browse and find script you need and easily deploy it by following command: <br />
