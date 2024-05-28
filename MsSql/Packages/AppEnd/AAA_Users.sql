@@ -4,7 +4,11 @@
 -- Description:	Table to hold users - AppEnd LowCode system
 -- =============================================
 CREATE TABLE [DBO].[AAA_Users](
-	[Id] [bigint] IDENTITY(100000,1) NOT NULL,
+	[Id] [int] IDENTITY(100000,1) NOT NULL,
+	[CreatedBy] [int] NOT NULL,
+	[CreatedOn] [datetime] NOT NULL,
+	[UpdatedBy] [int] NULL,
+	[UpdatedOn] [datetime] NULL,
 	[IsBuiltIn] [bit] NOT NULL,
 	[UserName] [nvarchar](64) NOT NULL,
 	[Email] [varchar](64) NULL,
@@ -15,10 +19,10 @@ CREATE TABLE [DBO].[AAA_Users](
 	[Picture_FileSize] [int] NULL,
 	[Picture_FileMime] [varchar](32) NULL,
 	[Password] [varchar](256) NULL,
-	[PasswordUpdatedBy] [nvarchar](64) NULL,
+	[PasswordUpdatedBy] [int] NULL,
 	[PasswordUpdatedOn] [datetime] NULL,
 	[IsActive] [bit] NOT NULL,
-	[IsActiveUpdatedBy] [nvarchar](64) NULL,
+	[IsActiveUpdatedBy] [int] NULL,
 	[IsActiveUpdatedOn] [datetime] NULL,
 	[LoginLocked] [bit] NOT NULL,
 	[LoginLockedUpdatedOn] [datetime] NULL,
@@ -26,10 +30,6 @@ CREATE TABLE [DBO].[AAA_Users](
 	[LoginTryFails] [int] NULL,
 	[LoginTryOn] [datetime] NULL,
 	[Settings] [ntext] NULL,
-	[CreatedBy] [nvarchar](64) NOT NULL,
-	[CreatedOn] [datetime] NOT NULL,
-	[UpdatedBy] [nvarchar](64) NULL,
-	[UpdatedOn] [datetime] NULL,
  CONSTRAINT [PK_AppEnd_Users] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -46,4 +46,4 @@ ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginFailed_Default]  DEFAULT ('0
 
 INSERT INTO AAA_Users	
 		(IsBuiltIn,UserName,Email,Mobile,[Password],IsActive,LoginLocked,LoginTry,Settings,CreatedBy,CreatedOn) 
-VALUES	(1,'admin','mirshahreza@gmail.com','989122026228','D7B91B6A9FA705E968B2C859FDDE9457',1,0,0,'{}',10000,GETDATE());
+VALUES	(1,'admin','youremail@yourdomain.com','989122026228','D7B91B6A9FA705E968B2C859FDDE9457',1,0,0,'{}',10000,GETDATE());

@@ -5,13 +5,13 @@
 -- =============================================
 CREATE TABLE [DBO].[AAA_Roles](
 	[Id] [int] IDENTITY(100,1) NOT NULL,
-	[IsBuiltIn] [bit] NULL,
-	[RoleName] [nvarchar](64) NOT NULL,
-	[Note] [nvarchar](256) NULL,
 	[CreatedBy] [int] NOT NULL,
 	[CreatedOn] [datetime] NOT NULL,
 	[UpdatedBy] [int] NULL,
 	[UpdatedOn] [datetime] NULL,
+	[IsBuiltIn] [bit] NULL,
+	[RoleName] [nvarchar](64) NOT NULL,
+	[Note] [nvarchar](256) NULL,
  CONSTRAINT [PK_AppEnd_Roles] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
