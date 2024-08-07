@@ -27,6 +27,7 @@ CREATE TABLE [DBO].[AAA_Users](
 	[LoginLocked] [bit] NOT NULL,
 	[LoginLockedUpdatedBy] [int] NULL,
 	[LoginLockedUpdatedOn] [datetime] NULL,
+	[LoginTry] [int] NULL,
 	[LoginTryFails] [int] NULL,
 	[LoginTryFailLastOn] [datetime] NULL,
 	[LoginTrySuccesses] [int] NULL,
