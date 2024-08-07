@@ -25,10 +25,12 @@ CREATE TABLE [DBO].[AAA_Users](
 	[IsActiveUpdatedBy] [int] NULL,
 	[IsActiveUpdatedOn] [datetime] NULL,
 	[LoginLocked] [bit] NOT NULL,
+	[LoginLockedUpdatedBy] [int] NULL,
 	[LoginLockedUpdatedOn] [datetime] NULL,
-	[LoginTry] [bit] NULL,
 	[LoginTryFails] [int] NULL,
-	[LoginTryOn] [datetime] NULL,
+	[LoginTryFailLastOn] [datetime] NULL,
+	[LoginTrySuccesses] [int] NULL,
+	[LoginTrySuccessLastOn] [datetime] NULL,
 	[Settings] [ntext] NULL,
  CONSTRAINT [PK_AppEnd_Users] PRIMARY KEY CLUSTERED 
 (
