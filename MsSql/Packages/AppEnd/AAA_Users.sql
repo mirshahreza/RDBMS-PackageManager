@@ -47,5 +47,5 @@ ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginLocked_Default]  DEFAULT ('0
 ALTER TABLE [DBO].[AAA_Users] ADD  CONSTRAINT [LoginFailed_Default]  DEFAULT ('0') FOR [LoginTryFails];
 
 INSERT INTO AAA_Users	
-		(IsBuiltIn,UserName,Email,Mobile,[Password],IsActive,LoginLocked,LoginTry,Settings,CreatedBy,CreatedOn) 
-VALUES	(1,'admin','youremail@yourdomain.com','989122026228','D7B91B6A9FA705E968B2C859FDDE9457',1,0,0,'{}',10000,GETDATE());
+		(IsBuiltIn,UserName,Email,Mobile,[Password],IsActive,LoginLocked,Settings,CreatedBy,CreatedOn) 
+VALUES	(1,'admin','youremail@yourdomain.com','989122026228','D7B91B6A9FA705E968B2C859FDDE9457',1,0,'{}',10000,GETDATE());
