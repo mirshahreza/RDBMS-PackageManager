@@ -5,7 +5,7 @@
 -- =============================================
 CREATE OR ALTER FUNCTION [DBO].[Zz_CountChar] 
 ( 
-    @pInput VARCHAR(1000), 
+    @pInput NVARCHAR(MAX), 
     @pSearchChar CHAR(1) 
 )
 RETURNS INT
