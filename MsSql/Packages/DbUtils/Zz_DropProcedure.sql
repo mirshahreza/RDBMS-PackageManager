@@ -4,13 +4,13 @@
 -- Description:	Drop a Procedure from a database
 -- =============================================
 CREATE OR ALTER PROCEDURE [DBO].[Zz_DropProcedure]
-	@Procedure VARCHAR(128)
+	@ProcedureName VARCHAR(128)
 AS
 
 BEGIN
 
 	DECLARE @S NVARCHAR(4000);
-	SET @S = 'DROP PROCEDURE IF EXISTS ' + @Procedure;
+	SET @S = 'DROP PROCEDURE IF EXISTS ' + @ProcedureName;
 	EXECUTE SP_EXECUTESQL @S;
 
 END
